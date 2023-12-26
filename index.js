@@ -46,6 +46,7 @@ app.use((0, compression_1.default)());
 app.use(express_1.default.json());
 // handle POST application/x-www-form-urlencoded
 app.use(express_1.default.urlencoded({ extended: true }));
+app.use(express_1.default.static("public"));
 // configure routes
 app.use("/", root_path.router);
 app.use("/register", register_path.router);
